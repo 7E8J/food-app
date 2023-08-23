@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import { ButtomTabNavigation } from "./navigation/ButtomTabNavigation";
 
-export default function App() {
+export default function App(): React.JSX.Element {
   return <ButtomTabNavigation />;
 }
 
