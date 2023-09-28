@@ -14,7 +14,7 @@ export const CategoriesScreen = ({navigation} : any) => {
         color={itemData.item.color}
         onSelect={ () => { navigation.navigate("CategoryMeals", {
             categoryid:itemData.item.id,
-            categoryTitle:itemData.item.title
+            categoryTitle:itemData.item.titlen
           }
         )}}
       />

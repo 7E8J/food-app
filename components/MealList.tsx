@@ -23,10 +23,10 @@ const MealList = ({navigation, listData}: Props) => {
         title={item.title}
         duration={item.duration}
         complexity={item.complexity}
-        affordability={item.affordability}
+        affordability={item.affordability}s
         image={item.imageUrl}
         onSelectMeal={() => {
-          { navigation.navigate("MealDetail", {dish:item.title, step:item.steps})}
+          { navigation.navigate("MealDetail", {meal: item})}
         }}
       />
     );

@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
 import { FavoritesScreen } from "../screens";
-import StackNavigation from "./StackNavigation";
+import MealsNavigation from "./MealsNavigation";
 
 const Tab = createBottomTabNavigator();
 
@@ -15,7 +15,7 @@ export const ButtomTabNavigation = () => {
           tabBarActiveTintColor: "orange",
           tabBarStyle: { backgroundColor: "#fff" },
           tabBarLabelStyle: { fontSize: 15 },}} >
-        <Tab.Screen name="Stack" component={StackNavigation}
+        <Tab.Screen name="Meals" component={MealsNavigation}
           options={{
             headerShown: false,
             tabBarIcon: ({color,size}) => {

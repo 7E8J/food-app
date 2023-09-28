@@ -1,9 +1,15 @@
 import React from "react";
 import { StyleSheet } from "react-native";
+import { Provider } from "react-redux";
 import { ButtomTabNavigation } from "./navigation/ButtomTabNavigation";
+import store from "./store";
 
 export default function App(): React.JSX.Element {
-  return <ButtomTabNavigation />;
+  return (
+    <Provider store={store}>
+      <ButtomTabNavigation />
+    </Provider>
+  );
 }
 
 const styles = StyleSheet.create({

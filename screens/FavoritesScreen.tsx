@@ -1,10 +1,12 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { useSelector } from "react-redux";
 import MealList from "../components/MealList";
-import { MEALS } from "../data/dummy-data";
 
 export const FavoritesScreen = ({navigation}) => {
-  const favMeals = MEALS.filter((meal) => meal.id === "m1" || meal.id === "m2");
+  const favMeals = useSelector((state : any) => state.meals.favoriteMeals)
+  
+  
 
   return (
     favMeals.length === 0 ? 
@@ -12,7 +14,7 @@ export const FavoritesScreen = ({navigation}) => {
       <Text>The Favorites Screen!</Text>
     </View>
     :
-  <MealList listData={favMeals} navigation={navigation}/>
+    <MealList listData={favMeals} navigation={navigation}/>
   );
 };
 
